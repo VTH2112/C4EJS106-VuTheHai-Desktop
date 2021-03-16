@@ -109,54 +109,54 @@
 
 // ________________________EX8________________________________
 
-// const sheepFlock = [5, 7, 300, 90, 24, 50, 75];
-// console.log(`Hello , my name is Phuong Nam and here is my sleep sizes :\n \n`, ...sheepFlock);
+const sheepFlock = [5, 7, 300, 90, 24, 50, 75];
+console.log(`Hello , my name is Phuong Nam and here is my sleep sizes :\n \n`, ...sheepFlock);
 
-// let maxSize = Math.max(...sheepFlock);
-// console.log(`\nNow my biggest sheep has size ${maxSize}, let's shave it`);
+let maxSize = Math.max(...sheepFlock);
+console.log(`\nNow my biggest sheep has size ${maxSize}, let's shave it`);
 
-// let imax = sheepFlock.indexOf(maxSize);
-// sheepFlock[imax] = 8;
-// console.log(`\nAfter shearing , here is my flock \n\n `, ...sheepFlock);
+let imax = sheepFlock.indexOf(maxSize);
+sheepFlock[imax] = 8;
+console.log(`\nAfter shearing , here is my flock \n\n `, ...sheepFlock);
 
-// let sheepFlockAmonth = [];
-// for (let i of sheepFlock) {
-//     i += 50;
-//     sheepFlockAmonth.push(i);
-// }
-// console.log(`\n  Month 1`);
-// console.log("\nOne month has, passed , my sheep have grown , here are their sizes \n\n", ...sheepFlockAmonth);
+let sheepFlockAmonth = [];
+for (let i of sheepFlock) {
+    i += 50;
+    sheepFlockAmonth.push(i);
+}
+console.log(`\n  Month 1`);
+console.log("\nOne month has, passed , my sheep have grown , here are their sizes \n\n", ...sheepFlockAmonth);
 
-// let maxSize1Month = Math.max(...sheepFlockAmonth);
-// console.log(`\nNow my biggest sheep has size ${maxSize1Month}, let's shave it`);
+let maxSize1Month = Math.max(...sheepFlockAmonth);
+console.log(`\nNow my biggest sheep has size ${maxSize1Month}, let's shave it`);
 
-// let imaxAmonth = sheepFlockAmonth.indexOf(maxSize1Month);
-// sheepFlockAmonth[imaxAmonth] = 8;
-// console.log(`\nAfter shearing , here is my flock \n\n `, ...sheepFlockAmonth);
+let imaxAmonth = sheepFlockAmonth.indexOf(maxSize1Month);
+sheepFlockAmonth[imaxAmonth] = 8;
+console.log(`\nAfter shearing , here is my flock \n\n `, ...sheepFlockAmonth);
 
 
-// let month = Number(prompt("Enter the number of months you want to choose  "));
-// let a = 2;
-// while (a <= month) {
-//     for (let a = 0; a < sheepFlockAmonth.length; a++) {
-//         sheepFlockAmonth[a] += 50;
-//     }
-//     let sum = 0;
-//     for (size of sheepFlockAmonth) {
-//         sum += size;
-//     }
-//     console.log(`\n  Month ${a}`);
-//     console.log("\nOne month has, passed , my sheep have grown , here are their sizes \n\n", ...sheepFlockAmonth);
-//     let maxSizexMonth = Math.max(...sheepFlockAmonth);
-//     console.log(`\nNow my biggest sheep has size ${maxSizexMonth}, let's shave it`);
-//     let imaxmonth = sheepFlockAmonth.indexOf(maxSizexMonth);
-//     sheepFlockAmonth[imaxmonth] = 8;
-//     console.log(`\nAfter shearing , here is my flock \n\n `, ...sheepFlockAmonth);
-//     console.log(`\n My flock has size in total : ${sum}`);
-//     console.log(`\nI would get ${sum} * 2$ :  ` + sum * 2 + " $");
-//     a++;
+let month = Number(prompt("Enter the number of months you want to choose  "));
+let a = 2;
+while (a <= month) {
+    for (let a = 0; a < sheepFlockAmonth.length; a++) {
+        sheepFlockAmonth[a] += 50;
+    }
+    let sum = 0;
+    for (size of sheepFlockAmonth) {
+        sum += size;
+    }
+    console.log(`\n  Month ${a}`);
+    console.log("\nOne month has, passed , my sheep have grown , here are their sizes \n\n", ...sheepFlockAmonth);
+    let maxSizexMonth = Math.max(...sheepFlockAmonth);
+    console.log(`\nNow my biggest sheep has size ${maxSizexMonth}, let's shave it`);
+    let imaxmonth = sheepFlockAmonth.indexOf(maxSizexMonth);
+    sheepFlockAmonth[imaxmonth] = 8;
+    console.log(`\nAfter shearing , here is my flock \n\n `, ...sheepFlockAmonth);
+    console.log(`\n My flock has size in total : ${sum}`);
+    console.log(`\nI would get ${sum} * 2$ :  ` + sum * 2 + " $");
+    a++;
 
-// }
+}
 
 
 
