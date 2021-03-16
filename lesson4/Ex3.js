@@ -1,8 +1,6 @@
 let findJobs = {
-    hits: [
-        {
-            benefits: [
-                {
+    hits: [{
+            benefits: [{
                     benefitIconName: 'fa-dollar',
                     benefitName: 'Bonus',
                     benefitValue: '14 tháng lương, đánh giá tăng lương 2 lần/ năm',
@@ -115,8 +113,7 @@ let findJobs = {
                         'developer'
                     ]
                 },
-                skills: [
-                    {
+                skills: [{
                         value: 'Hibernate',
                         matchLevel: 'none',
                         matchedWords: []
@@ -160,8 +157,7 @@ let findJobs = {
             }
         },
         {
-            benefits: [
-                {
+            benefits: [{
                     benefitIconName: 'fa-graduation-cap',
                     benefitName: 'Training',
                     benefitValue: 'Tham gia các khoá đào tạo Quản lý, Kỹ năng mềm',
@@ -259,8 +255,7 @@ let findJobs = {
                         'developer'
                     ]
                 },
-                skills: [
-                    {
+                skills: [{
                         value: 'Java',
                         matchLevel: 'none',
                         matchedWords: []
@@ -310,8 +305,7 @@ let findJobs = {
             }
         },
         {
-            benefits: [
-                {
+            benefits: [{
                     benefitIconName: 'fa-plane',
                     benefitName: 'Travel Opportunities',
                     benefitValue: 'Cơ hội On-site tại Mỹ, Nhật Bản',
@@ -407,8 +401,7 @@ let findJobs = {
                         'developer'
                     ]
                 },
-                skills: [
-                    {
+                skills: [{
                         value: 'Docker Swarm',
                         matchLevel: 'none',
                         matchedWords: []
@@ -453,8 +446,7 @@ let findJobs = {
             }
         },
         {
-            benefits: [
-                {
+            benefits: [{
                     benefitIconName: 'fa-graduation-cap',
                     benefitName: 'Training',
                     benefitValue: 'Continuous learning and career growth',
@@ -552,8 +544,7 @@ let findJobs = {
                         'developer'
                     ]
                 },
-                skills: [
-                    {
+                skills: [{
                         value: 'Software Engineering',
                         matchLevel: 'none',
                         matchedWords: []
@@ -607,8 +598,7 @@ let findJobs = {
             }
         },
         {
-            benefits: [
-                {
+            benefits: [{
                     benefitIconName: 'fa-graduation-cap',
                     benefitName: 'Training',
                     benefitValue: 'Continuous learning and career growth',
@@ -710,8 +700,7 @@ let findJobs = {
                         'developer'
                     ]
                 },
-                skills: [
-                    {
+                skills: [{
                         value: 'Software Engineering',
                         matchLevel: 'none',
                         matchedWords: []
@@ -762,8 +751,7 @@ let findJobs = {
             }
         },
         {
-            benefits: [
-                {
+            benefits: [{
                     benefitIconName: 'fa-check-square-o',
                     benefitName: 'Others',
                     benefitValue: 'Dynamic & Friendly working environment',
@@ -876,8 +864,7 @@ let findJobs = {
                         'developer'
                     ]
                 },
-                skills: [
-                    {
+                skills: [{
                         value: 'Java',
                         matchLevel: 'none',
                         matchedWords: []
@@ -933,28 +920,28 @@ console.log("Job hits");
 console.log(findJobs);
 console.log("Job hits");
 console.log(findJobs.hits[0]);
-console.log("First job title \n"+findJobs.hits[0].jobTitle);
+console.log("First job title \n" + findJobs.hits[0].jobTitle);
 console.log("First job benefits");
 console.log(findJobs.hits[0].benefits);
 console.log("First job hits benefits");
 let hits = findJobs.hits;
-for( let i of hits ){
+for (let i of hits) {
     console.log(i.jobTitle);
     console.log('Benefits:');
-    for( let value of i.benefits ){
+    for (let value of i.benefits) {
         console.log('- ' + value.benefitValue);
     }
     console.log('______________________________________');
 }
-for( let i of hits ){
-    console.log( `Title: ${i.jobTitle}`); 
+for (let i of hits) {
+    console.log(`Title: ${i.jobTitle}`);
     console.log(`Salary: ${i.jobSalary}`);
     console.log('Locations:')
-    for( let key of i.locations ){
+    for (let key of i.locations) {
         console.log(`- ${key}`)
     }
     console.log('Skills:');
-    for ( let value of i.skills ){
+    for (let value of i.skills) {
         console.log(`- ${value}`);
     }
     console.log('--------------------------------------');
