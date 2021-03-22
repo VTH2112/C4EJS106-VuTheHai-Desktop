@@ -1,5 +1,13 @@
 Pt2(1, -5, 4);
 
+avg(0, 7.5, 7, 7.5, 7);
+
+
+
+
+
+
+
 
 function Pt2(a, b, c) {
     if (a == 0 || b == 0 || c == 0) {
@@ -34,23 +42,21 @@ function Pt2(a, b, c) {
     };
 };
 
-avg(10,7.5,7,7.5,7);
-function avg (...marks){
+function avg(...marks) {
     let totalMarks = 0;
-    for( let i of marks){
+    for (let i of marks) {
         totalMarks += i;
     }
     avgMarks = (totalMarks / marks.length).toFixed(2);
-    if(avgMarks >= 0 && avgMarks <4 ){
+    if (avgMarks >= 0 && avgMarks < 4) {
         alert(`Điểm trung bình của ${marks.length} môn học là: ${avgMarks}\nXếp loại : Yếu`);
-    }else if( avgMarks < 6 ){
+    } else if (avgMarks < 6) {
         alert(`Điểm trung bình của ${marks.length} môn học là: ${avgMarks}\nXếp loại : Trung Bình`);
-    }else if( avgMarks < 8 ){
+    } else if (avgMarks < 8) {
         alert(`Điểm trung bình của ${marks.length} môn học là: ${avgMarks}\nXếp loại : Khá`);
-    }else if(avgMarks <= 10){
+    } else if (avgMarks <= 10) {
         alert(`Điểm trung bình của ${marks.length} môn học là: ${avgMarks}\nXếp loại : Giỏi`);
-    }
-    else{
+    } else {
         alert("Điểm trung bình phải từ 0 -> 10");
     }
 }
