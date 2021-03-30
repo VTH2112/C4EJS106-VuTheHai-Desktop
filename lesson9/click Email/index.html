@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 50px;
+            font-size: 20px;
+        }
+
+        table {
+            display: flex;
+            border: 0px;
+            justify-content: center;
+        }
+
+        ul li {
+            list-style-type: none;
+            border: 1px solid black;
+            padding: 15px;
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Click on the email to display the information</h2>
+    <ul id="list-email">
+    </ul>
+    <table id="personInfor">
+        <tr id="head" hidden>
+            <td colspan="5" style="text-align : center">
+                <h2>Information</h2>
+            </td>
+        </tr>
+        <tr id="tr"></tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>

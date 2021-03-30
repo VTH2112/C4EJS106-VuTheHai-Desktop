@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 50px;
+            height: 30px;
+            margin: 30px 5px 20px 5px;
+            border: 0px;
+            font-size: 15px;
+        }
+
+        button:focus {
+            outline: 0px;
+            color: grey;
+        }
+
+        button:hover {
+            font-size: 17px;
+            color: grey;
+            transition: ease-out 0.2s;
+        }
+
+        input {
+            text-align: center;
+            width: 120px;
+            height: 30px;
+            margin: 30px 5px 20px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            height: 969px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .container {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 500px;
+            height: 80px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: button;
+            margin: 0;
+        }
+
+        .count {
+            display: flex;
+            width: 400px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            padding-left: 220px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container">
+            <input type="number" id="inputNum" min="1" max="100">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
+        <div class="count">
+            <h2 id="countNum">5</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
