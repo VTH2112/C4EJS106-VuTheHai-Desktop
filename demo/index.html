@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Recources/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        /* _______________________________________HEADER__________________________________________________ */
+        .container {
+            width: 100%;
+            height: 100%;
+            background-image: url('img/background.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            width: 100%;
+            height: 200px;
+            display: flex;
+        }
+
+        .nav-border {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            border-bottom: 1px solid;
+            border-style: outset;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        header .ul-nav {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        header .li-nav {
+            list-style-type: none;
+            padding: 0 50px 0 50px;
+            font-size: 25px;
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        header .ul-nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header #loginMenu {
+            width: 80px;
+            height: 70px;
+            position: absolute;
+            top: 120px;
+        }
+
+        header #loginMenu li {
+            list-style-type: none;
+            padding: 10px 0 10px 10px;
+            font-size: 16px;
+            background-color: white;
+            opacity: 0.6;
+        }
+
+        header #loginMenu li a {
+            color: black;
+        }
+
+        .logo img {
+            height: 200px;
+            width: 300px;
+        }
+
+        #home {
+            border-bottom: 1px solid white;
+        }
+
+        /* _________________________________________section-Tasks_______________________________________________ */
+
+        .section-tasks {
+            width: 100%;
+            height: 769px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        #tasks .leftSite {
+            background-color: antiquewhite;
+            height: 100%;
+            width: 50%;
+        }
+
+        #tasks .rightSite {
+            height: 100%;
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #tasks .color {
+            margin-top: -50px;
+            margin-bottom: 100px;
+            height: 200px;
+            width: 200px;
+        }
+
+        #tasks .rightSite .red {
+            width: 100%;
+        }
+
+        #tasks .rightSite p {
+            display: inline-block;
+            padding-left: 30px;
+            font-size: 21px;
+            color: white;
+        }
+
+        #tasks .rightSite span {
+            color: white;
+        }
+
+
+        /* _________________________________________section-tasksComplete______________________________________________*/
+
+        .section-tasksComplete {
+            width: 100%;
+            height: 769px;
+            display: flex;
+        }
+
+        .section-tasksComplete .toptSite {
+            height: 45%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        .section-tasksComplete .leftSite {
+            height: 100%;
+            width: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .section-tasksComplete .rightSite {
+            height: 100%;
+            width: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .section-tasksComplete span {
+            color: white;
+            padding: 2px;
+
+
+        }
+
+        .section-tasksComplete p {
+            display: inline-block;
+            color: white;
+            margin-left: 5px;
+        }
+
+        .section-tasksComplete .color {
+            width: 50px;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+
+        /* _________________________________________________________________________________________ */
+        .svg {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        :root {
+            --pi: 3.14159265359;
+            --a1: 13;
+            --a2: 25;
+            --a3: 7;
+            --a4: 5;
+        }
+
+        @keyframes percent1 {
+            to {
+                stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a1) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a1) / 100));
+            }
+        }
+
+        @keyframes percent2 {
+            to {
+                stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a2) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a2) / 100));
+            }
+        }
+
+        @keyframes percent3 {
+            to {
+                stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a3) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a3) / 100));
+            }
+        }
+
+        @keyframes percent4 {
+            to {
+                stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a4) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a4) / 100));
+            }
+        }
+
+        .donut {
+            transform-origin: center center;
+            transition: 0.5s ease-in-out;
+            stroke-dashoffset: 0;
+            cursor: pointer;
+        }
+
+        .donut:nth-child(1) {
+            transform: rotateZ(50.45deg);
+            animation: percent1 1s ease-in-out forwards;
+        }
+
+        .donut:nth-child(2) {
+            transform: rotateZ(0deg);
+            transform: rotateX(-900deg);
+            animation: percent2 1s ease-in-out forwards;
+        }
+
+        .donut:nth-child(3) {
+            transform: rotateZ(200deg);
+            transform: rotateX(0deg);
+            transform: rotateY(0deg);
+            animation: percent3 1s ease-in-out forwards;
+        }
+
+        .donut:nth-child(4) {
+            transform: rotateX(180deg);
+            transform: rotateY(180deg);
+            animation: percent4 1s ease-in-out forwards;
+        }
+
+        .donut:hover {
+            stroke-width: 33;
+        }
+
+        /* _________________________________________________________________________________________ */
+        .svg1 {
+            width: 400px;
+            height: 400px;
+        }
+
+        :root {
+            --pi1: 3.14159265359;
+            --a11: 8;
+            --a21: 12;
+            --a31: 7;
+            --a41: 6.5;
+        }
+
+        @keyframes percent11 {
+            to {
+                stroke-dasharray: calc(2 * var(--pi1) * 300 * var(--a11) / 100) calc(2 * var(--pi1) * 300 * calc(1 - var(--a11) / 100));
+            }
+        }
+
+        @keyframes percent21 {
+            to {
+                stroke-dasharray: calc(2 * var(--pi1) * 300 * var(--a21) / 100) calc(2 * var(--pi1) * 300 * calc(1 - var(--a21) / 100));
+            }
+        }
+
+        @keyframes percent31 {
+            to {
+                stroke-dasharray: calc(2 * var(--pi1) * 300 * var(--a31) / 100) calc(2 * var(--pi1) * 300 * calc(1 - var(--a31) / 100));
+            }
+        }
+
+        @keyframes percent41 {
+            to {
+                stroke-dasharray: calc(2 * var(--pi1) * 300 * var(--a41) / 100) calc(2 * var(--pi1) * 300 * calc(1 - var(--a41) / 100));
+            }
+        }
+
+        .donut1 {
+            transform-origin: center center;
+            transition: 0.5s ease-in-out;
+            stroke-dashoffset: 0;
+            cursor: pointer;
+        }
+
+        .donut1:nth-child(1) {
+            transform: rotateZ(75.45deg);
+            animation: percent11 1s ease-in-out forwards;
+        }
+
+        .donut1:nth-child(2) {
+            transform: rotateX(-900deg);
+            transform: rotateZ(882deg);
+            animation: percent21 1s ease-in-out forwards;
+        }
+
+        .donut1:nth-child(3) {
+            transform: rotateZ(200deg);
+            transform: rotateX(0deg);
+            animation: percent31 1s ease-in-out forwards;
+        }
+
+        .donut1:nth-child(4) {
+            transform: rotateZ(290deg);
+            animation: percent41 1s ease-in-out forwards;
+        }
+
+        .donut1:hover {
+            stroke-width: 35;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#menuLoginBtn").click(function () {
+                $("#loginMenu").slideToggle(300);
+            });
+            $("#home").click(function () {
+                $("#home").css({
+                    'border-bottom': '1px solid white',
+                    'transition': ' 0.4s'
+                });
+                $("#tasks").css('border-bottom', 'none');
+                $("#tasksComplete").css('border-bottom', 'none');
+                $("#admin").css('border-bottom', 'none');
+            });
+            $("#tasks").click(function () {
+                $("#tasks").css({
+                    'border-bottom': '1px solid white',
+                    'transition': ' 0.4s'
+                });
+                $("#home").css('border-bottom', 'none');
+                $("#tasksComplete").css('border-bottom', 'none');
+                $("#admin").css('border-bottom', 'none');
+                $('.tasksHidden').show(500);
+                $('.tasksCompleteHidden').hide();
+            });
+            $("#tasksComplete").click(function () {
+                $("#tasksComplete").css({
+                    'border-bottom': '1px solid white',
+                    'transition': ' 0.4s'
+                });
+                $("#home").css('border-bottom', 'none');
+                $("#tasks").css('border-bottom', 'none');
+                $("#admin").css('border-bottom', 'none');
+                $('.tasksCompleteHidden').show(500);
+                $('.tasksHidden').hide();
+            });
+            $("#admin").click(function () {
+                $("#admin").css({
+                    'border-bottom': '1px solid white',
+                    'transition': ' 0.4s'
+                });
+                $("#home").css('border-bottom', 'none');
+                $("#tasks").css('border-bottom', 'none');
+                $("#tasksComplete").css('border-bottom', 'none');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-border">
+                <div class="logo"><img src="img/logo.png"></div>
+                <nav class="nav-bar">
+                    <ul class=ul-nav>
+                        <li class="li-nav" id="home"><a href="#">HOME</a></li>
+                        <li class="li-nav" id="tasks"><a href="#">TASKS</a></li>
+                        <li class="li-nav" id="tasksComplete"><a href="#">TASKS COMPLETED</a></li>
+                        <li class="li-nav" id="admin"><a href="#">ADMIN</a></li>
+                        <li class="li-nav" id="logoutMenu">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"
+                                style="margin-right: 10px; color: white;"></i>
+                            <i class="fa fa-caret-down" id="menuLoginBtn" aria-hidden="true" style=" color: white;"></i>
+                            <div id="loginMenu" hidden>
+                                <ul>
+                                    <li id="accName" style="border-top-left-radius: 6px;border-top-right-radius: 6px"><a
+                                            href="#">Hi name !</a></li>
+                                    <li id="login"
+                                        style="border-bottom-left-radius: 6px;border-bottom-right-radius: 6px"><a
+                                            href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section>
+            <div class="tasksHidden" hidden>
+                <div class="section-tasks" id="tasks">
+                    <div class="leftSite"></div>
+                    <div class="rightSite">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svg">
+                            <circle cx="200" cy="200" class="donut" r="150" stroke-width="30" stroke="#ff8c69"
+                                fill="none" />
+                            <circle cx="200" cy="200" class="donut" r="150" stroke-width="30" stroke="#ffff00"
+                                fill="none" />
+                            <circle cx="200" cy="200" class="donut" r="150" stroke-width="30" stroke="#008000"
+                                fill="none" />
+                            <circle cx="200" cy="200" class="donut" r="150" stroke-width="30" stroke="#87CEFA"
+                                fill="none" />
+                        </svg>
+                        <div class="color">
+                            <div class="red">
+                                <span
+                                    style="display:inline-block; width: 15px;height: 15px;background-color:#ffff00;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                <p>abc</p>
+                            </div>
+                            <div class="red">
+                                <span
+                                    style="display:inline-block; width: 15px;height: 15px;background-color:#008000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                <p>abc</p>
+                            </div>
+                            <div class="red">
+                                <span
+                                    style="display:inline-block; width: 15px;height: 15px;background-color:#ff8c69">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                <p>abc</p>
+                            </div>
+                            <div class="red">
+                                <span
+                                    style="display:inline-block; width: 15px;height: 15px;background-color:#87CEFA;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                <p>abc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasksCompleteHidden">
+                <div class="section-tasksComplete" id="tasksComplete">
+                    <div class="toptSite">
+                        <div class="leftSite">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="svg1">
+                                <circle cx="200" cy="200" class="donut1" r="100" stroke-width="30" stroke="#ff8c69"
+                                    fill="none" />
+                                <circle cx="200" cy="200" class="donut1" r="100" stroke-width="30" stroke="#ffff00"
+                                    fill="none" />
+                                <circle cx="200" cy="200" class="donut1" r="100" stroke-width="30" stroke="#008000"
+                                    fill="none" />
+                                <circle cx="200" cy="200" class="donut1" r="100" stroke-width="30" stroke="#87CEFA"
+                                    fill="none" />
+                            </svg>
+                            <div class="color">
+                                <div class="red">
+                                    <span
+                                        style="display:inline-block; width: 15px;height: 15px;background-color:#ffff00;">&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                    <p>abc</p>
+                                </div>
+                                <div class="red">
+                                    <span
+                                        style="display:inline-block; width: 15px;height: 15px;background-color:#008000;">&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                    <p>abc</p>
+                                </div>
+                                <div class="red">
+                                    <span
+                                        style="display:inline-block; width: 15px;height: 15px;background-color:#ff8c69">&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                    <p>abc</p>
+                                </div>
+                                <div class="red">
+                                    <span
+                                        style="display:inline-block; width: 15px;height: 15px;background-color:#87CEFA;">&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                    <p>abc</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightSite">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="svg1">
+                                <circle cx="200" cy="200" class="donut1" r="100" stroke-width="30" stroke="#ff8c69"
+                                    fill="none" />
+                                <circle cx="200" cy="200" class="donut1" r="100" stroke-width="30" stroke="#ffff00"
+                                    fill="none" />
+                                <circle cx="200" cy="200" class="donut1" r="100" stroke-width="30" stroke="#008000"
+                                    fill="none" />
+                                <circle cx="200" cy="200" class="donut1" r="100" stroke-width="30" stroke="#87CEFA"
+                                    fill="none" />
+                            </svg>
+                            <div class="color">
+                                <div class="red">
+                                    <span
+                                        style="display:inline-block; width: 15px;height: 15px;background-color:#ffff00;">&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                    <p>abc</p>
+                                </div>
+                                <div class="red">
+                                    <span
+                                        style="display:inline-block; width: 15px;height: 15px;background-color:#008000;">&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                    <p>abc</p>
+                                </div>
+                                <div class="red">
+                                    <span
+                                        style="display:inline-block; width: 15px;height: 15px;background-color:#ff8c69">&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                    <p>abc</p>
+                                </div>
+                                <div class="red">
+                                    <span
+                                        style="display:inline-block; width: 15px;height: 15px;background-color:#87CEFA;">&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                                    <p>abc</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+        </footer>
+    </div>
+    <script src="Recources/app.js"></script>
+</body>
+
+</html>
